@@ -1,3 +1,6 @@
 [submodule "third_party/doctest"]
 	path = third_party/doctest
 	url = https://github.com/onqtam/doctest
+[submodule "third_party/smart-build"]
+	path = third_party/smart-build
+	url = https://github.com/digimokan/smart-build
