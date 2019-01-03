@@ -103,7 +103,8 @@ also extremely simple to use.
 
 ## Contributing
 
-* Feel free to report a bug or propose a feature by opening an issue.
+* Feel free to report a bug or propose a feature by opening a new
+  [Issue](https://github.com/digimokan/cpp-object-pool/issues).
 * Follow the project's [Contributing](CONTRIBUTING.md) guidelines.
 * Respect the project's [Code Of Conduct](CODE_OF_CONDUCT.md).
 
