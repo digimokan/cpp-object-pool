@@ -1,0 +1,27 @@
+# cmake project title
+cpp-object-pool
+# cmake min version required
+3.0.2
+# language type:"C" or "CPP"
+CPP
+# language standard
+11
+# defs and system-include standards: space-separated, "-" if empty
+-
+# warning levels: space-separated, "-" if empty
+-Wall
+# top-level src dirs: colon-separated
+src:third_party/doctest/doctest
+# src file with main-executable code: "-" if none, i.e. test only
+-
+# main executable file to build: "-" if none, i.e. test only
+-
+# testing language type: "C" or "CPP" (N/A if building without -t/-T)
+CPP
+# testing language standard (N/A if building without -t/-T)
+17
+# testing top-level src dirs: colon-separated, "-" if none
+tests
+# test-driver executable to build (N/A if building without -t/-T)
+cpp-object-pool-test-driver
+# EOF: FILE MUST END WITH THIS LAST LINE
