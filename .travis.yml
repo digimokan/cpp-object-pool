@@ -1,0 +1,55 @@
+# travis git repo-cloning settings
+git:
+  # clone repo to depth of n commits
+  depth: 3
+  # clone with quiet flag
+  quiet: false
+  # clone submodules
+  submodules: true
+
+# whitelist travis build branches with "only", blacklist with "except"
+branches:
+  only:
+  - master
+  - devel
+
+language: cpp
+
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      compiler: gcc
+      addons:
+        apt:
+          sources:
+          - ubuntu-toolchain-r-test
+          packages:
+          - gcc-7
+          - g++-7
+      before_script:
+        - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-7
+        - sudo update-alternatives --config gcc
+    - os: linux
+      dist: xenial
+      compiler: clang
+
+# # add-ons to build environment
+# addons:
+#   apt:
+#     sources:
+#     - ubuntu-toolchain-r-test
+#     packages:
+#     - gcc-7
+#     - g++-7
+
+# customize build environment
+# before_script:
+#   - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-7
+#   - sudo update-alternatives --config gcc
+
+# build / test cmds
+script:
+  - cd tests
+  - ./test_driver.sh
+
