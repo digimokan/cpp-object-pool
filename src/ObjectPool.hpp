@@ -44,8 +44,8 @@ public:
   // operators
   ObjectPool (const ObjectPool& in) = default;
   ObjectPool& operator= (const ObjectPool& rh) = default;
-  ObjectPool (ObjectPool&& in) noexcept = default;
-  ObjectPool& operator= (ObjectPool&& rh) noexcept = default;
+  ObjectPool (ObjectPool&& in) = default;
+  ObjectPool& operator= (ObjectPool&& rh) = default;
 
   // specialized
   void* allocate ();
