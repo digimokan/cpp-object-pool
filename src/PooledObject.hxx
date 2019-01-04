@@ -48,7 +48,7 @@ void* PooledObject<Obj, initial_pool_size>::operator new (std::size_t sz) {
 }
 
 template <typename Obj, size_t initial_pool_size>
-static void PooledObject<Obj, initial_pool_size>::operator delete (void* ptr) {
+void PooledObject<Obj, initial_pool_size>::operator delete (void* ptr) {
   assert(ptr != nullptr);
   PooledObject::object_pool->deallocate(ptr);
 }

@@ -15,6 +15,7 @@ branches:
 
 language: cpp
 
+# build environments
 matrix:
   include:
     - os: linux
@@ -33,20 +34,6 @@ matrix:
     - os: linux
       dist: xenial
       compiler: clang
-
-# # add-ons to build environment
-# addons:
-#   apt:
-#     sources:
-#     - ubuntu-toolchain-r-test
-#     packages:
-#     - gcc-7
-#     - g++-7
-
-# customize build environment
-# before_script:
-#   - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-7
-#   - sudo update-alternatives --config gcc
 
 # build / test cmds
 script:
