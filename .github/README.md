@@ -56,10 +56,6 @@ also extremely simple to use.
 
    ```cpp
    class Foo : public PooledObject<Foo, 10> {
-   public:
-     explicit Derived (int x) : x{x} { }
-     int get_x () const { return x; }
-   private:
      int x;
    };
    ```
@@ -75,7 +71,7 @@ also extremely simple to use.
    `delete` calls:
 
    ```cpp
-   Foo f = new Foo{4};
+   Foo* f = new Foo{};
    delete f;
    ```
 

@@ -197,3 +197,18 @@ TEST_CASE("over-allocate by one object"
 
 }
 
+TEST_CASE("create simple objects on heap") {
+
+  class Simple : public PooledObject<Simple, 10> {
+    int x;
+  };
+
+  Simple* s1 = new Simple{};
+  Simple* s2 = new Simple{};
+  Simple* s3 = new Simple{};
+  delete s1;
+  delete s2;
+  delete s3;
+
+}
+
